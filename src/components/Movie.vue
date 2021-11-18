@@ -1,10 +1,13 @@
 <template>
+<div class="cotainer">
      <div class="card flex">
         <p>TITOLO: {{title}}</p>
         <p>TITOLO ORIGINALE: {{original_title}}</p>
         <p>LINGUA ORIGINAE: {{original_language}}</p>
         <p>VOTO:{{vote_average}}</p>
      </div>
+</div>
+
 </template>
 
 
@@ -16,7 +19,6 @@ export default {
         original_title: String,
         original_language: String,
         vote_average: Number,
-
     }
 
 }

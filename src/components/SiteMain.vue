@@ -1,7 +1,7 @@
 <template>
  <div class="sitemain">
    <SearchBox @search='search'/>
-    <div class="container_movies flex">
+    <div class="container_movies flex" v-if="movies.length>0">
      <div class="movie flex" v-for="movie in movies" :key="movie.id">
         <Movie
         :title="movie.title"
@@ -10,6 +10,10 @@
         :vote_average="movie.vote_average"/>
       </div>
     </div>
+    <div v-if="alreadySearched && movies.length == 0">
+      <p class="noresult flex">Non è stato trovato nessun risultato</p>
+    </div>
+
  </div> 
 </template>
 
@@ -25,11 +29,14 @@ export default {
     data(){
     return{
         movies:[],
+        alreadySearched: false
     }
   },
   methods:{
     search(searchMovies){
        this.callApi(searchMovies);
+        this.alreadySearched = true
+
     
     },
        callApi(searchMovies){
@@ -57,5 +64,10 @@ export default {
 }
 .movie {
   padding: 10px;
+}
+.noresult{
+justify-content: center;
+margin-top: 3rem;
+color: red;
 }
 </style>
