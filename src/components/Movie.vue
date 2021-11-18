@@ -1,6 +1,6 @@
 <template>
      <div class="card flex">
-        <p> TITOLO: {{title}}</p>
+        <p>TITOLO: {{title}}</p>
         <p>TITOLO ORIGINALE: {{original_title}}</p>
         <p>LINGUA ORIGINAE: {{original_language}}</p>
         <p>VOTO:{{vote_average}}</p>
