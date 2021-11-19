@@ -40,7 +40,7 @@ export default {
     
     },
        callApi(searchMovies){
-      let API_URL= "https://api.themoviedb.org/3/search/movie?api_key=4db7aa0aef6b2145477778558e1489b1&language=it-IT&query="+ searchMovies +"&page=1"
+      let API_URL= "https://api.themoviedb.org/3/search/movie?api_key=4db7aa0aef6b2145477778558e1489b1&query="+ searchMovies +"&page=1"
 
       axios
       .get(API_URL)

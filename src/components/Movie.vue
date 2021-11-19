@@ -4,6 +4,7 @@
         <p>TITOLO: {{title}}</p>
         <p>TITOLO ORIGINALE: {{original_title}}</p>
         <p>LINGUA ORIGINAE: {{original_language}}</p>
+        <country-flag :country='original_language' size='small'/>
         <p>VOTO:{{vote_average}}</p>
      </div>
 </div>
@@ -19,8 +20,8 @@ export default {
         original_title: String,
         original_language: String,
         vote_average: Number,
-    }
-
+    },
+  
 }
 </script>
 
